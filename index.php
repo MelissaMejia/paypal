@@ -2,9 +2,9 @@
 //Permite crear un archivo LOG cada vez que se ejecuta este script, 0 para desactivarlo
 define("DEBUG", 0);
 // 1 para usarlo con el simulador de paypal (https://developer.paypal.com/developer/ipnSimulator/), 0 para usarlo con pagos reales
-define("USE_SANDBOX", 1);
+define("USE_SANDBOX", 0);
 // este es el archivo LOG no importa si no existe este lo crea automaticamente
-define("LOG_FILE", "resultadopaypal.txt");
+define("LOG_FILE", "resultadopaypal1.txt");
 
 // permite verificar si los datos son recibidos desde paypal y no otra pagina diferente
 $raw_post_data = file_get_contents('php://input');
@@ -102,7 +102,7 @@ if (strcmp ($res, "VERIFIED") == 0) {
 	
 	//Crea un archivo TXT cada vez que se recibe un pago desde paypal
 	//con todos los datos que nos envia
-	$txt = fopen("paypalpagos.txt", "a+");
+	$txt = fopen("paypalpagos1.txt", "a+");
 	
 	ob_start();
 	var_dump($_POST);
