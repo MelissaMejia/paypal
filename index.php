@@ -1,5 +1,4 @@
 <?php
-echo "cambios";
 //Permite crear un archivo LOG cada vez que se ejecuta este script, 0 para desactivarlo
 define("DEBUG", 0);
 // 1 para usarlo con el simulador de paypal (https://developer.paypal.com/developer/ipnSimulator/), 0 para usarlo con pagos reales
